@@ -393,16 +393,36 @@ function stop(){
     busyFlag = false;
 }
 
+function speed(){
+    const btn = document.getElementById("speedBtn");
+
+    if(TIME == 1000){
+        btn.innerHTML = "SPEED 2x";
+        TIME = 500;
+    }else if(TIME == 500){
+        btn.innerHTML = "SPEED 3x";
+        TIME = 100;
+    }else{
+        btn.innerHTML = "SPEED 1x";
+        TIME = 1000;
+    }
+}
+
 const delay = ()=>new Promise((resolve)=>{setTimeout(()=>{resolve(1)},TIME)})
 
-// may depricate in future
-
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-  }
 
 randomize();
+
+const nameASCII =`                                  __      __                       
+    /\\                            \\ \\    / /                       
+   /  \\   _ __ _   _  __ _ _ __    \\ \\  / /__ _ __ _ __ ___   __ _ 
+  / /\\ \\ | '__| | | |/ _\` | '_ \\    \\ \\/ / _ \\ '__| '_ \` _ \\ / _\` |
+ / ____ \\| |  | |_| | (_| | | | |    \\  /  __/ |  | | | | | | (_| |
+/_/    \\_\\_|   \\__, |\\__,_|_| |_|     \\/ \\___|_|  |_| |_| |_|\\__,_|
+                __/ |                                              
+               |___/                                               
+`;
+
+console.log(`%c${nameASCII}`,'font-family:monospace');
+console.log("Linked In :");
+console.log("Git Hub :");
