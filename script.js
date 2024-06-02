@@ -354,6 +354,8 @@ async function cocktailShakerSort(){
         }
         fes++;
     }
+
+    busyFlag=flase;
 }
 
 
