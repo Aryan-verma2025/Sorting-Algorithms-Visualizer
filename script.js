@@ -424,5 +424,5 @@ const nameASCII =`                                  __      __
 `;
 
 console.log(`%c${nameASCII}`,'font-family:monospace');
-console.log("Linked In :");
-console.log("Git Hub :");
+console.log("Linked In : https://www.linkedin.com/in/aryan-verma-b4a643228/");
+console.log("Git Hub : https://github.com/Aryan-verma2025/Sorting-Algorithms-Visualizer");
