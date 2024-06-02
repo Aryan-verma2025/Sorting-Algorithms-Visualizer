@@ -38,8 +38,8 @@ async function bubbleSort(){
                 flag = true;
             }
 
-            bars[j].style.background = "blue";
-            bars[j+1].style.background = "blue";
+            bars[j].style.background = "#44447f";
+            bars[j+1].style.background = "#44447f";
             
            
         }
@@ -84,12 +84,12 @@ async function selectionSort(){
                 bars[j].style.height = bars[i].style.height;
                 bars[i].style.height = tmpT;
 
-                bars[j].style.background="blue";
-                bars[i].style.background="blue";
+                bars[j].style.background="#44447f";
+                bars[i].style.background="#44447f";
             }
 
-            bars[j].style.background="blue";
-            bars[i].style.background="blue";
+            bars[j].style.background="#44447f";
+            bars[i].style.background="#44447f";
         }
     }
 
@@ -120,13 +120,13 @@ async function quickSort(bars,s,e){
         await delay();
 
         for(let i=s;i<p;i++){
-            bars[i].style.background = "blue";
+            bars[i].style.background = "#44447f";
         }
         for(let i=p+1;i<=e;i++){
-            bars[i].style.background = "blue";
+            bars[i].style.background = "#44447f";
         }
 
-        bars[p].style.background = "blue";
+        bars[p].style.background = "#44447f";
         await quickSort(bars,s,p-1);
         await quickSort(bars,p+1,e);
     }
@@ -204,7 +204,7 @@ async function insertionSort(){
             bars[val].innerHTML = bars[val-1].innerHTML;
             bars[val].style.height = bars[val-1].style.height;
 
-            bars[val].style.background="blue";
+            bars[val].style.background="#44447f";
 
             bars[val-1].innerHTML = `${curr}`;
             bars[val-1].style.height=`${curr}vh`;
@@ -214,7 +214,7 @@ async function insertionSort(){
         bars[val].style.height=`${curr}vh`;
         bars[val].innerHTML=`${curr}`;
 
-        bars[i].style.background="blue";
+        bars[i].style.background="#44447f";
     }
     busyFlag=false;
 }
@@ -242,7 +242,7 @@ async function mergeSort(bars,s,e){
        await delay();
         merge(bars,s,mid,e);
         for(let i=s;i<=e;i++){
-            bars[i].style.background = "blue";
+            bars[i].style.background = "#44447f";
            }
         
     }
@@ -315,8 +315,8 @@ async function cocktailShakerSort(){
                 bars[j].style.height = bars[j+1].style.height;
                 bars[j+1].style.height = tmpT;
             }
-            bars[j].style.background="blue";
-            bars[j+1].style.background="blue";
+            bars[j].style.background="#44447f";
+            bars[j+1].style.background="#44447f";
         }
 
         for(let k=bars.length-2-i;k>0+fes;k--){
@@ -339,8 +339,8 @@ async function cocktailShakerSort(){
                 bars[k-1].style.height = tmpT;
             }
 
-            bars[k].style.background="blue";
-            bars[k-1].style.background="blue";
+            bars[k].style.background="#44447f";
+            bars[k-1].style.background="#44447f";
             await delay();
         }
         fes++;
@@ -424,5 +424,5 @@ const nameASCII =`                                  __      __
 `;
 
 console.log(`%c${nameASCII}`,'font-family:monospace');
-console.log("Linked In : https://www.linkedin.com/in/aryan-verma-b4a643228/");
+console.log("Linked In : https://www.linkedin.com/in/aryan-verma-b4a643228");
 console.log("Git Hub : https://github.com/Aryan-verma2025/Sorting-Algorithms-Visualizer");
