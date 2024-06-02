@@ -299,7 +299,7 @@ async function cocktailShakerSort(){
 
         if(!busyFlag) return;
 
-        for(let j=i+fes;j<bars.length-1-i;j++){
+        for(let j=fes;j<bars.length-1-i;j++){
 
             if(!busyFlag) return;
 
@@ -355,7 +355,7 @@ async function cocktailShakerSort(){
         fes++;
     }
 
-    busyFlag=flase;
+    busyFlag=false;
 }
 
 
