@@ -196,7 +196,7 @@ async function insertionSort(){
         let curr = Number.parseInt(bars[i].innerHTML)
         let val = i;
 
-        while(val >0 && curr < Number.parseInt(bars[val-1].innerHTML)){
+        while(val > 0 && curr < Number.parseInt(bars[val-1].innerHTML)){
 
             bars[val].style.background="red";
             await delay();
@@ -290,12 +290,18 @@ function merge(bars,s,mid,e){
 
 async function cocktailShakerSort(){
 
+    busyFlag = true;
+
     const bars = document.getElementsByClassName("bars");
     let fes = 0;
-    //console.log(bars[0].innerHTML);
+    
     for(let i=0;i<bars.length;i++){
 
+        if(!busyFlag) return;
+
         for(let j=i+fes;j<bars.length-1-i;j++){
+
+            if(!busyFlag) return;
 
             bars[j].style.background="yellow";
             bars[j+1].style.background="yellow";
@@ -320,6 +326,9 @@ async function cocktailShakerSort(){
         }
 
         for(let k=bars.length-2-i;k>0+fes;k--){
+
+            if(!busyFlag) return;
+
             bars[k].style.background="yellow";
             bars[k-1].style.background="yellow";
             await delay();
@@ -412,6 +421,16 @@ const delay = ()=>new Promise((resolve)=>{setTimeout(()=>{resolve(1)},TIME)})
 
 
 randomize();
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.querySelector("body").classList.add("mode-dark");
+    document.querySelector(".mainWindow").classList.add("mode-dark");
+
+} else {
+    document.querySelector("body").classList.add("mode-light");
+    document.querySelector(".mainWindow").classList.add("mode-light");
+}
+
 
 const nameASCII =`                                  __      __                       
     /\\                            \\ \\    / /                       
